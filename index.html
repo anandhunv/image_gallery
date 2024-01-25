@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="credit">
+        <h5>&copy;<a href="https://github.com/nvanxndhu">anandhu.n.v</a></h5>
+      </div>
+<div class="gallery-wrap">
+    <img src="images/back.png" alt="" id="backbtn">
+    <div class="gallery">
+        <div>
+            <span><img src="images/fafa.jpg" alt=""></span>
+            <span><img src="images/aadujeevitham-v0-4jejtjwme2dc1.webp" alt=""></span>
+            <span><img src="images/Picsart_24-01-25_17-39-05-271.jpg" alt=""></span>
+           
+
+        </div>
+        <div>
+            
+           
+            <span><img src="images/Picsart_24-01-25_17-35-48-605.jpg" alt=""></span>
+            <span><img src="images/Picsart_24-01-25_17-36-05-723.jpg" alt=""></span>
+            <span><img src="images/Picsart_24-01-25_17-38-54-435.jpg" alt=""></span>
+
+
+            
+
+        </div>
+        <div>
+            <span><img src="images/Barroz.jpeg" alt=""></span>
+            <span><img src="images/Guruvayoor Ambala Nadayil.jpg" alt=""></span>
+            <span><img src="images/Kanguva.webp" alt=""></span>
+           
+
+        </div>
+    </div>
+    <img src="images/next.png" alt="" id="nextbtn">
+</div>
+   
+
+<script>
+//enable horizontal scroll using mouse wheel 
+let scrollContainer = document.querySelector(".gallery");
+let backbtn = document.getElementById("backbtn");
+let nextbtn = document.getElementById("nextbtn");
+
+scrollContainer.addEventListener("mouse", (evt) => {
+    evt.preventDefault(); //prevent default behavior
+    scrollContainer.scrollLeft += evt.deltaY;
+    scrollContainer.style.scrollBehavior = "auto";
+});
+
+nextbtn.addEventListener("click", () => {
+    scrollContainer.style.scrollBehavior = "smooth";
+    scrollContainer.scrollLeft += 900;
+});
+
+backbtn.addEventListener("click", () => {
+    scrollContainer.style.scrollBehavior = "smooth";
+    scrollContainer.scrollLeft -= 900;
+});
+</script>
+    
+</body>
+</html>
